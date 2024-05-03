@@ -6,11 +6,12 @@ body{
     flex-direction: column;
     justify-content: center;
     text-align: left;
+    background-color:rgb(223, 221, 218);
 }
 
 img {
     width: 400px;
-    padding: 20px;
+    padding: 20px;    
 }
 
 label{
@@ -21,14 +22,14 @@ label{
     height: fit-content;
     min-height: 200px;
     width: 100%;
-    background-color:rgb(239, 216, 186);
+    background-color:rgba(182,184,182,255);
     color: darkslategray;
     padding-top: 30px;
     text-align: center;
 }
 
 #add_btn{
-    background-color: cadetblue;
+    background-color: c;
     color: white;
     font-weight: bold;
     border-radius: 20px;
