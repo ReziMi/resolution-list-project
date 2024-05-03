@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucket List 2025</title>
+</head>
+<body>
+    <div id="add_item">
+        <!-- REMOVE RESOLUTION FORM -->
+        <div id="remove-items">
+            <form action="/remove_items" method="POST">
+                {% for item in show_items %}
+                <input type="checkbox" name="check" id="{{item}}" value="{{item}}">
+                <label for="{{item}}" name="{{item}}">{{item}}"</label><br>
+                {% endfor %}
+                <input type="submit" value="REMOVE ITEMS">
+            </form>
+        </div>
+
+        <!-- ADD RESOLUTION FORM -->
+        <form action="/add_items" method="POST">
+            <select name="select_items">
+            {% for item in all_items %}
+            <option value="{{ item }}">{{ item }}</option>
+            {% endfor %}
+            <input type="submit" value="ADD ITEM"
+        </form>
+    </div>
+</body>
+</html>
