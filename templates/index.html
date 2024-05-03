@@ -4,17 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bucket List 2025</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+    <script type="text/javascript" src="{{url_for('static', filename='js/main.js')}}">
 </head>
 <body>
-    <div id="add_item">
+        <!-- logo -->
+        <div>
+            <img src="../project_logo.PNG" alt="resolution_logo">
+        </div>
         <!-- REMOVE RESOLUTION FORM -->
-        <div id="remove-items">
+        
+        <div id="remove_items">
             <form action="/remove_items" method="POST">
                 {% for item in show_items %}
                 <input type="checkbox" name="check" id="{{item}}" value="{{item}}">
                 <label for="{{item}}" name="{{item}}">{{item}}"</label><br>
                 {% endfor %}
-                <input type="submit" value="REMOVE ITEMS">
+                <input type="submit" value="REMOVE ITEMS" id="remove_btn">
             </form>
         </div>
 
@@ -24,8 +30,7 @@
             {% for item in all_items %}
             <option value="{{ item }}">{{ item }}</option>
             {% endfor %}
-            <input type="submit" value="ADD ITEM"
+            <input type="submit" value="ADD ITEM" id="add_btn">
         </form>
-    </div>
 </body>
 </html>
